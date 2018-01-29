@@ -1,0 +1,224 @@
+#all-tasks {
+  height: 100%;
+  overflow: auto;
+  .top {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/d/d1/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg')
+    center center no-repeat;
+    width:100%;
+    // height:300px;
+    background-size: cover;
+    position: relative;
+    .header {
+      background: rgba(58, 71, 147, 0.6);
+      padding: 50px 15px;
+      text-align: right;
+
+      .logo {
+        font-family: 'Megrim', cursive;
+        float:left;
+        font-size: 36px;
+      }
+
+      .tasksWrapper {
+        position: relative;
+        top: -20px;
+        .tasks {
+          display: inline-block;
+          .number {
+            color: $lightPurple;
+            font-weight: 100;
+            font-size: 60px;
+            margin: 0 20px 0 0;
+            position: relative;
+            top: 15px;
+          }
+        }
+      }
+
+      .add-circle {
+        cursor: pointer;
+        background: black;
+        border-radius: 50%;
+        position: absolute;
+        top: 125px;
+        right: 25px;
+        padding: 10px 14px;
+        .fa {
+          color: $lightBlue;
+          font-size: 50px;
+        }
+      }
+    }
+  }
+
+  .contentArea {
+    padding-top: 30px;
+    .container {
+      padding: 0 15px;
+      margin: 0 auto;
+      .tasks {
+        position: relative;
+        border-bottom: 2px solid #D1D1D1;
+        margin: 20px auto;
+        background: $white;
+        padding: 20px;
+        .title {
+          color: black;
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+        .created {
+          color: #ABABAB;
+          font-size: 14px;
+        }
+        .checkBox {
+          position: absolute;
+          right: 20px;
+          top: 25px;
+          .fa {
+            color: $darkBlue;
+            border: 3px solid $darkBlue;
+            padding: 2px;
+            border-radius: 10px;
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+
+  .task-form{
+    background: $darkBlue;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 100px 0;
+    transform: translate(0, 100%);
+    transition: all .6s ease-in-out;
+    &.active {
+      transform: translate(0, 0);
+    }
+
+    .close-btn {
+      right: 35px;
+      top: 35px;
+      cursor: pointer;
+      position: absolute;
+      padding: 15px;
+      .fa {
+        font-size: 36px;
+        color: $lightPurple;
+      }
+    }
+
+    h3 {
+      margin: 0 auto;
+      max-width: 500px;
+      display:block;
+      padding: 50px 0;
+      text-align: center;
+      font-size: 36px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    form{
+      display: block;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    label {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      display:block;
+      text-transform: capitalize;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    input[type="text"], textarea {
+      width: 100%;
+      background: rgba(255, 255, 255, .1);
+      color: $white;
+      font-weight: 300;
+      font-size: 24px;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+      &:focus {
+        outline: none;
+      }
+    }
+
+    textarea {
+      height: 250px;
+    }
+
+    button {
+      background: $lightBlue;
+      padding: 15px 100px;
+      border: none;
+      width: 100%;
+      font-size:16px;
+      text-transform: uppercase;
+
+    }
+  }
+}
+
+.container {
+  max-width: 1200px;
+}
+
+
+//PHONES -- min width of ipad is 768px
+@media screen and (max-width: 525px) {
+  #all-tasks {
+      .top {
+        .header{
+          .add-circle {
+            top: 100px;
+          }
+
+          .tasksWrapper {
+            .tasks {
+              display:block;
+              .number {
+                font-size: 18px;
+                position: static;
+                margin-right: 5px;
+                font-weight: 800;
+              }
+            }
+          }
+        }
+      }
+
+      .task-form {
+        .form-group {
+          padding: 0 15px;
+        }
+      }
+  }
+}
+
+@media screen and (max-width: 347px) {
+  #all-tasks {
+      .top {
+        .header{
+          .logo {
+            font-size: 30px;
+          }
+          .tasksWrapper {
+            .tasks {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+  }
+
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
+  <body>
+    <div id="all-tasks">
+      <section class="top">
+        <div class="header">
+          <div class="logo">
+            TaskManager
+          </div>
+          <div class="tasksWrapper">
+            <div class="tasks">
+              <span class="number">12</span> Tasks
+            </div>
+            <div class="tasks">
+              <span class="number">5</span> Completed
+            </div>
+          </div>
+
+          <div class="add-circle">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+          </div>
+        </div>
+      </section>
+
+      <section class="contentArea">
+        <div class="container">
+          <div class="tasks">
+            <div class="title">
+              Clean Room
+            </div>
+            <div class="created">
+              Created: January 28, 2017
+            </div>
+            <div class="checkBox">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="tasks">
+            <div class="title">
+              Clean Room
+            </div>
+            <div class="created">
+              Created: January 28, 2017
+            </div>
+            <div class="checkBox">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </div>
+
+          <div class="tasks">
+            <div class="title">
+              Clean Room
+            </div>
+            <div class="created">
+              Created: January 28, 2017
+            </div>
+            <div class="checkBox">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="tasks">
+            <div class="title">
+              Clean Room
+            </div>
+            <div class="created">
+              Created: January 28, 2017
+            </div>
+            <div class="checkBox">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="tasks">
+            <div class="title">
+              Clean Room
+            </div>
+            <div class="created">
+              Created: January 28, 2017
+            </div>
+            <div class="checkBox">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="tasks">
+            <div class="title">
+              Clean Room
+            </div>
+            <div class="created">
+              Created: January 28, 2017
+            </div>
+            <div class="checkBox">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="tasks">
+            <div class="title">
+              Clean Room
+            </div>
+            <div class="created">
+              Created: January 28, 2017
+            </div>
+            <div class="checkBox">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="tasks">
+            <div class="title">
+              Clean Room
+            </div>
+            <div class="created">
+              Created: January 28, 2017
+            </div>
+            <div class="checkBox">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="tasks">
+            <div class="title">
+              Clean Room
+            </div>
+            <div class="created">
+              Created: January 28, 2017
+            </div>
+            <div class="checkBox">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="tasks">
+            <div class="title">
+              Clean Room
+            </div>
+            <div class="created">
+              Created: January 28, 2017
+            </div>
+            <div class="checkBox">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </div>
+          <div class="tasks">
+            <div class="title">
+              Clean Room
+            </div>
+            <div class="created">
+              Created: January 28, 2017
+            </div>
+            <div class="checkBox">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="task-form">
+        <div class="close-btn">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <form>
+          <div class="form-group">
+            <h3>
+              Add a new task
+            </h3>
+            <label for"title">Title:</label>
+            <input type="text" name="title" />
+          </div>
+
+          <div class="form-group">
+            <label for"category">Categoy:</label>
+            <input type="text" name="category" />
+          </div>
+
+          <div class="form-group">
+            <label for"notes">Notes:</label>
+            <textarea name="notes"></textarea>
+          </div>
+
+          <div class="form-group">
+            <button type="submit">Add Task</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <script
+      src="http://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function() {
+        $('.add-circle').on('click', function() {
+          $('.task-form').addClass('active');
+        });
+
+        $('.task-form .close-btn').on('click', function() {
+          $('.task-form').removeClass('active');
+        });
+      });
+    </script>
+  </body>
+</html>
